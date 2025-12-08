@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class SEPlayer : MonoBehaviour
 {
@@ -11,13 +10,9 @@ public class SEPlayer : MonoBehaviour
     void Awake()
     {
         SEFlagClear();
-    } 
-    void Start()
-    {
         audioSource = this.gameObject.GetComponent<AudioSource>();
         DontDestroyOnLoad(this.gameObject);
-    }
-
+    } 
     void Update()
     {
         Play();
